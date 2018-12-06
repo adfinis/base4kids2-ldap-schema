@@ -1,0 +1,254 @@
+###############################################################################
+# Base4Kids LDAP schema
+###############################################################################
+
+###
+# OID organisation
+#
+# 1.3.6.1.4.1             iso.org.dod.internet.private.enterprise
+# 1.3.6.1.4.1.31534       Adfinis SyGroup AG OID root
+# 1.3.6.1.4.1.31534.2.5   Base4Kids2 OID root
+# 1.3.6.1.4.1.31534.2.5.1 Base4Kids2 LDAP object classes OID root
+# 1.3.6.1.4.1.31534.2.5.2 Base4Kids2 LDAP attributes OID root
+
+dn: cn=schema
+
+###
+# Attributes
+#
+# Attribut type description from RFC 2252
+#
+#       AttributeTypeDescription = "(" whsp
+#            numericoid whsp              ; AttributeType identifier
+#          [ "NAME" qdescrs ]             ; name used in AttributeType
+#          [ "DESC" qdstring ]            ; description
+#          [ "OBSOLETE" whsp ]
+#          [ "SUP" woid ]                 ; derived from this other
+#                                         ; AttributeType
+#          [ "EQUALITY" woid              ; Matching Rule name
+#          [ "ORDERING" woid              ; Matching Rule name
+#          [ "SUBSTR" woid ]              ; Matching Rule name
+#          [ "SYNTAX" whsp noidlen whsp ] ; see section 4.3
+#          [ "SINGLE-VALUE" whsp ]        ; default multi-valued
+#          [ "COLLECTIVE" whsp ]          ; default not collective
+#          [ "NO-USER-MODIFICATION" whsp ]; default user modifiable
+#          [ "USAGE" whsp AttributeUsage ]; default userApplications
+#          whsp ")"
+#
+#      AttributeUsage =
+#          "userApplications"     /
+#          "directoryOperation"   /
+#          "distributedOperation" / ; DSA-shared
+#          "dSAOperation"          ; DSA-specific, value depends on server
+#
+
+# Name:     base4kidsUserRole
+# Syntax:   Directory String
+# Examples: SUS, LP, EB
+attributetype: ( 
+      1.3.6.1.4.1.31534.2.5.2.1
+      NAME 'base4kidsUserRole'
+      DESC 'Role of a base4kids user'
+      EQUALITY 'caseExactMatch'
+      ORDERING 'caseExactOrderingMatch'
+      SUBSTR 'caseExactSubstringsMatch'
+      SYNTAX '1.3.6.1.4.1.1466.115.121.1.15'
+      SINGLE-VALUE )
+
+# Name:     base4kidsIsActive
+# Syntax:   Boolean
+# Examples, TRUE, FALSE
+attributetype: ( 
+      1.3.6.1.4.1.31534.2.5.2.2
+      NAME 'base4kidsIsActive'
+      DESC 'Determines whether a base4kids object is active'
+      EQUALITY 'booleanMatch'
+      SYNTAX '1.3.6.1.4.1.1466.115.121.1.7'
+      SINGLE-VALUE )
+
+# Name:     base4kidsChatIsActive
+# Syntax:   Boolean
+# Examples, TRUE, FALSE
+attributetype: ( 
+      1.3.6.1.4.1.31534.2.5.2.3
+      NAME 'base4kidsChatIsActive'
+      DESC 'Determines whether chat access is active'
+      SUP 'base4kidsIsActive' )
+
+# Name:     base4kidsCloudStorageIsActive
+# Syntax:   Boolean
+# Examples, TRUE, FALSE
+attributetype: ( 
+      1.3.6.1.4.1.31534.2.5.2.4
+      NAME 'base4kidsCloudStorageIsActive'
+      DESC 'Determines whether cloud storage access is active'
+      SUP 'base4kidsIsActive' )
+
+# Name:     base4kidsEportfolioIsActive
+# Syntax:   Boolean
+# Examples, TRUE, FALSE
+attributetype: ( 
+      1.3.6.1.4.1.31534.2.5.2.5
+      NAME 'base4kidsEportfolioIsActive'
+      DESC 'Determines whether the ePortfolio system access is active'
+      SUP 'base4kidsIsActive' )
+
+# Name:     base4kidsGroupwareIsActive
+# Syntax:   Boolean
+# Examples, TRUE, FALSE
+attributetype: ( 
+      1.3.6.1.4.1.31534.2.5.2.6
+      NAME 'base4kidsGroupwareIsActive'
+      DESC 'Determines whether groupware access is active'
+      SUP 'base4kidsIsActive' )
+
+# Name:     base4kidsImapIsActive
+# Syntax:   Boolean
+# Examples, TRUE, FALSE
+attributetype: ( 
+      1.3.6.1.4.1.31534.2.5.2.7
+      NAME 'base4kidsImapIsActive'
+      DESC 'Determines whether IMAP access is active'
+      SUP 'base4kidsIsActive' )
+
+# Name:     base4kidsLearningPlatformIsActive
+# Syntax:   Boolean
+# Examples, TRUE, FALSE
+attributetype: ( 
+      1.3.6.1.4.1.31534.2.5.2.8
+      NAME 'base4kidsLearningPlatformIsActive'
+      DESC 'Determines whether learning platform access is active'
+      SUP 'base4kidsIsActive' )
+
+# Name:     base4kidsSmtpReceiveIsActive
+# Syntax:   Boolean
+# Examples, TRUE, FALSE
+attributetype: ( 
+      1.3.6.1.4.1.31534.2.5.2.9
+      NAME 'base4kidsSmtpReceiveIsActive'
+      DESC 'Determines whether SMTP (mail) receiving is active'
+      SUP 'base4kidsIsActive' )
+
+# Name:     base4kidsSmtpSubmissionIsActive
+# Syntax:   Boolean
+# Examples, TRUE, FALSE
+attributetype: ( 
+      1.3.6.1.4.1.31534.2.5.2.10
+      NAME 'base4kidsSmtpSubmissionIsActive'
+      DESC 'Determines whether SMTP submission is permitted'
+      SUP 'base4kidsIsActive' )
+
+# Name:     base4kidsWebmailIsActive
+# Syntax:   Boolean
+# Examples, TRUE, FALSE
+attributetype: ( 
+      1.3.6.1.4.1.31534.2.5.2.11
+      NAME 'base4kidsWebmailIsActive'
+      DESC 'Determines whether webmail access is active'
+      SUP 'base4kidsIsActive' )
+
+# Name:     base4kidsMattermostTeamId
+# Syntax:   Printable String
+# Examples: oue19dh6zbfu9rdt8ua9hw1iqa, ncdb6o84jj8fzxyizbre8qrtmw
+attributetype: ( 
+      1.3.6.1.4.1.31534.2.5.2.12
+      NAME 'base4kidsMattermostTeamId'
+      DESC 'Mattermost team GUID'
+      EQUALITY 'numericStringMatch'
+      ORDERING 'numericStringOrderingMatch'
+      SUBSTR 'numericStringSubstringsMatch'
+      SYNTAX '1.3.6.1.4.1.1466.115.121.1.44'
+      SINGLE-VALUE )
+
+# Name:     base4kidsNextCloudShareId
+# Syntax:   Integer
+# Examples: 3015, 18
+attributetype: ( 
+      1.3.6.1.4.1.31534.2.5.2.13
+      NAME 'base4kidsNextCloudShareId'
+      DESC 'Nextcloud share ID'
+      EQUALITY 'integerMatch'
+      ORDERING 'integerOrderingMatch'
+      SYNTAX '1.3.6.1.4.1.1466.115.121.1.27'
+      SINGLE-VALUE )
+
+# Name:     base4kidsMaharaGroupId
+# Syntax:   Integer
+# Examples: 456, 7
+attributetype: ( 
+      1.3.6.1.4.1.31534.2.5.2.14
+      NAME 'base4kidsMaharaGroupId'
+      DESC 'Mahara group ID'
+      EQUALITY 'integerMatch'
+      ORDERING 'integerOrderingMatch'
+      SYNTAX '1.3.6.1.4.1.1466.115.121.1.27'
+      SINGLE-VALUE )
+
+# Name:     base4kidsSchoolDistrict
+# Syntax:   Directory String
+# Examples: Kirchenfeld-Schosshalde
+attributetype: ( 
+      1.3.6.1.4.1.31534.2.5.2.15
+      NAME 'base4kidsSchoolDistrict'
+      DESC 'The name of the school district (Schulkreis)'
+      EQUALITY 'caseIgnoreMatch'
+      ORDERING 'caseIgnoreOrderingMatch'
+      SUBSTR 'caseIgnoreSubstringsMatch'
+      SYNTAX '1.3.6.1.4.1.1466.115.121.1.15'
+      SINGLE-VALUE )
+
+# Name:     base4kidsSchoolLocation
+# Syntax:   Directory String
+# Examples: Laubegg
+attributetype: ( 
+      1.3.6.1.4.1.31534.2.5.2.16
+      NAME 'base4kidsSchoolLocation'
+      DESC 'The name of the school location (Schulstandort)'
+      SUP 'base4kidsSchoolDistrict' )
+
+# Name:     base4kidsSchoolCampus
+# Syntax:   Directory String
+# Examples: Sonnenhof
+attributetype: ( 
+      1.3.6.1.4.1.31534.2.5.2.17
+      NAME 'base4kidsSchoolCampus'
+      DESC 'The name of the school campus (Schulanlage)'
+      SUP 'base4kidsSchoolDistrict' )
+
+# Name:     base4kidsSchoolClassName
+# Syntax:   Directory String
+# Examples: "S9 a 2018/2019"
+attributetype: ( 
+      1.3.6.1.4.1.31534.2.5.2.18
+      NAME 'base4kidsSchoolClassName'
+      DESC 'The name of a school class'
+      EQUALITY 'caseExactMatch'
+      ORDERING 'caseExactOrderingMatch'
+      SUBSTR 'caseExactSubstringsMatch'
+      SYNTAX '1.3.6.1.4.1.1466.115.121.1.15'
+      SINGLE-VALUE )
+
+# Name:     base4kidsSchoolClassGradeLevel
+# Syntax:   Directory String
+# Examples: S9
+attributetype: ( 
+      1.3.6.1.4.1.31534.2.5.2.19
+      NAME 'base4kidsSchoolClassLevel'
+      DESC 'The level of a school class (Klassenstufe)'
+      SUP 'base4kidsSchoolClassName' )
+
+# Name:     base4kidsClassSubGroup
+# Syntax:   Directory String
+# Examples: "a 2018/2019"
+attributetype: ( 
+      1.3.6.1.4.1.31534.2.5.2.20
+      NAME 'base4kidsClassSubGroup'
+      DESC 'The school class sub group'
+      SUP 'base4kidsClassSubGroup' )
+
+
+# @TODO:
+# appleID
+# eGovID
+# Group type (or alternatively via objectclass?)
+# nextcloud quota
