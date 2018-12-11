@@ -61,18 +61,17 @@ dn: cn=schema
 #          "dSAOperation"          ; DSA-specific, value depends on server
 #
 
-# Name:     base4kidsUserRole
+# Name:     base4kidsRole
 # Syntax:   Directory String
 # Examples: SUS, LP, EB
 attributetype: ( 
       1.3.6.1.4.1.31534.2.5.2.1
-      NAME 'base4kidsUserRole'
-      DESC 'Role of a base4kids user'
-      EQUALITY 'caseExactMatch'
-      ORDERING 'caseExactOrderingMatch'
-      SUBSTR 'caseExactSubstringsMatch'
-      SYNTAX '1.3.6.1.4.1.1466.115.121.1.15'
-      SINGLE-VALUE )
+      NAME 'base4kidsRole'
+      DESC 'Role of a base4kids object'
+      EQUALITY 'caseIgnoreMatch'
+      ORDERING 'caseIgnoreOrderingMatch'
+      SUBSTR 'caseIgnoreSubstringsMatch'
+      SYNTAX '1.3.6.1.4.1.1466.115.121.1.15' )
 
 # Name:     base4kidsIsActive
 # Syntax:   Boolean
