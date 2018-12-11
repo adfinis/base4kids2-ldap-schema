@@ -274,9 +274,37 @@ attributetype: (
       DESC 'The school class sub group'
       SUP 'base4kidsClassSubGroup' )
 
+# Name:     base4kidsAppleId
+# Syntax:   IA5String
+# Examples: "name@example.com"
+attributetype: ( 
+      1.3.6.1.4.1.31534.2.5.2.22
+      NAME 'base4kidsAppleId'
+      DESC 'Apple ID (email address)'
+      SUP 'mail' )
 
-# @TODO:
-# appleID
-# eGovID
-# Group type (or alternatively via objectclass?)
-# nextcloud quota
+# Name:     base4kidsEgovId
+# Syntax:   Directory String
+# Examples: "L1234" "S7890"
+attributetype: ( 
+      1.3.6.1.4.1.31534.2.5.2.23
+      NAME 'base4kidsEgovId'
+      DESC 'eGov ID'
+      EQUALITY 'caseExactMatch'
+      ORDERING 'caseExactOrderingMatch'
+      SUBSTR 'caseExactSubstringsMatch'
+      SYNTAX '1.3.6.1.4.1.1466.115.121.1.15'
+      SINGLE-VALUE )
+
+# Name:     base4kidsGroupType
+# Syntax:   Printable String
+# Examples: "SCHOOL_DISTRICT" "SCHOOL_LOCATION" "SCHOOL_CAMPUS" "SCHOOL_CLASS"
+attributetype: ( 
+      1.3.6.1.4.1.31534.2.5.2.24
+      NAME 'base4kidsGroupType'
+      DESC 'Group type'
+      EQUALITY 'numericStringMatch'
+      ORDERING 'numericStringOrderingMatch'
+      SUBSTR 'numericStringSubstringsMatch'
+      SYNTAX '1.3.6.1.4.1.1466.115.121.1.44'
+      SINGLE-VALUE )
