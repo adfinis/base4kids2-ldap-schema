@@ -264,14 +264,14 @@ attributetype: (
       DESC 'The level of a school class (Klassenstufe)'
       SUP 'base4kidsSchoolClassName' )
 
-# Name:     base4kidsClassSubGroup
+# Name:     base4kidsSchoolClassSubGroup
 # Syntax:   Directory String
 # Examples: "a 2018/2019"
 attributetype: ( 
       1.3.6.1.4.1.31534.2.5.2.21
-      NAME 'base4kidsClassSubGroup'
+      NAME 'base4kidsSchoolClassSubGroup'
       DESC 'The school class sub group'
-      SUP 'base4kidsClassSubGroup' )
+      SUP 'base4kidsSchoolClassSubGroup' )
 
 # Name:     base4kidsAppleId
 # Syntax:   IA5String
@@ -379,7 +379,6 @@ objectClasses: (
       DESC 'Base4Kids person object'
       SUP top AUXILIARY
       MAY (
-            base4kidsClassSubGroup $
             base4kidsEgovId $
             base4kidsGroupType $
             base4kidsIsActive $
@@ -391,6 +390,7 @@ objectClasses: (
             base4kidsSchoolCampus $
             base4kidsSchoolClassLevel $
             base4kidsSchoolClassName $
+            base4kidsSchoolClassSubGroup $
             base4kidsSchoolDistrict $
             base4kidsSchoolLocation $
             base4kidsSmtpReceiveIsActive $
