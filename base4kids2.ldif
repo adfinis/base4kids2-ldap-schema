@@ -172,9 +172,9 @@ attributetype: (
       1.3.6.1.4.1.31534.2.5.2.12
       NAME 'base4kidsMattermostTeamId'
       DESC 'Mattermost team GUID'
-      EQUALITY 'numericStringMatch'
-      ORDERING 'numericStringOrderingMatch'
-      SUBSTR 'numericStringSubstringsMatch'
+      EQUALITY 'caseExactMatch'
+      ORDERING 'caseExactOrderingMatch'
+      SUBSTR 'caseExactSubstringsMatch'
       SYNTAX '1.3.6.1.4.1.1466.115.121.1.44'
       SINGLE-VALUE )
 
@@ -302,9 +302,9 @@ attributetype: (
       1.3.6.1.4.1.31534.2.5.2.24
       NAME 'base4kidsGroupType'
       DESC 'Group type'
-      EQUALITY 'numericStringMatch'
-      ORDERING 'numericStringOrderingMatch'
-      SUBSTR 'numericStringSubstringsMatch'
+      EQUALITY 'caseIgnoreMatch'
+      ORDERING 'caseIgnoreOrderingMatch'
+      SUBSTR 'caseIgnoreSubstringsMatch'
       SYNTAX '1.3.6.1.4.1.1466.115.121.1.44'
       SINGLE-VALUE )
 
