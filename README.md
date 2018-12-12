@@ -13,7 +13,7 @@ steps on CentOS 7 or RHEL 7:
 serverInstanceName="example-01"
 
 # Download the base4kids2 schema
-wget -O "/etc/dirsrv/slapd-${serverInstanceName}/schema/99base4kids2.ldif" \
+wget -O "/etc/dirsrv/slapd-${serverInstanceName}/schema/90base4kids2.ldif" \
     "https://raw.githubusercontent.com/adfinis-sygroup/base4kids2-ldap-schema/master/base4kids2.ldif"
 
 # Restart the directory server instance
