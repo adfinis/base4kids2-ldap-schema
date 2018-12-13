@@ -331,6 +331,24 @@ attributeTypes: (
       SYNTAX 1.3.6.1.4.1.1466.115.121.1.44
       SINGLE-VALUE )
 #
+# Name:     base4kidsNextCloudClassShareId
+# Syntax:   Integer
+# Examples: 3015, 18
+attributeTypes: (
+      1.3.6.1.4.1.31534.2.5.2.26
+      NAME 'base4kidsNextCloudClassShareId'
+      DESC 'Nextcloud school class folder share ID'
+      SUP base4kidsNextCloudShareId )
+#
+# Name:     base4kidsNextCloudClassTemplateShareId
+# Syntax:   Integer
+# Examples: 3015, 18
+attributeTypes: (
+      1.3.6.1.4.1.31534.2.5.2.27
+      NAME 'base4kidsNextCloudClassTemplateShareId'
+      DESC 'Nextcloud school class template folder share ID'
+      SUP base4kidsNextCloudShareId )
+#
 #
 ###############################################################################
 # Object Classes
@@ -389,6 +407,8 @@ objectClasses: (
             base4kidsMaharaGroupId $
             base4kidsMattermostChannelId $
             base4kidsMattermostTeamId $
+            base4kidsNextCloudClassShareId $
+            base4kidsNextCloudClassTemplateShareId $
             base4kidsNextCloudShareId $
             base4kidsRole $
             base4kidsSchoolCampus $
