@@ -193,12 +193,12 @@ attributeTypes: (
       DESC 'Mattermost channel GUID'
       SUP base4kidsMattermostTeamId )
 #
-# Name:     base4kidsNextCloudShareId
+# Name:     base4kidsNextcloudShareId
 # Syntax:   Integer
 # Examples: 3015, 18
 attributeTypes: ( 
       1.3.6.1.4.1.31534.2.5.2.14
-      NAME 'base4kidsNextCloudShareId'
+      NAME 'base4kidsNextcloudShareId'
       DESC 'Nextcloud share ID'
       EQUALITY integerMatch
       ORDERING integerOrderingMatch
@@ -331,23 +331,23 @@ attributeTypes: (
       SYNTAX 1.3.6.1.4.1.1466.115.121.1.44
       SINGLE-VALUE )
 #
-# Name:     base4kidsNextCloudClassShareId
+# Name:     base4kidsNextcloudClassShareId
 # Syntax:   Integer
 # Examples: 3015, 18
 attributeTypes: (
       1.3.6.1.4.1.31534.2.5.2.26
-      NAME 'base4kidsNextCloudClassShareId'
+      NAME 'base4kidsNextcloudClassShareId'
       DESC 'Nextcloud school class folder share ID'
-      SUP base4kidsNextCloudShareId )
+      SUP base4kidsNextcloudShareId )
 #
-# Name:     base4kidsNextCloudClassTemplateShareId
+# Name:     base4kidsNextcloudClassTemplateShareId
 # Syntax:   Integer
 # Examples: 3015, 18
 attributeTypes: (
       1.3.6.1.4.1.31534.2.5.2.27
-      NAME 'base4kidsNextCloudClassTemplateShareId'
+      NAME 'base4kidsNextcloudClassTemplateShareId'
       DESC 'Nextcloud school class template folder share ID'
-      SUP base4kidsNextCloudShareId )
+      SUP base4kidsNextcloudShareId )
 #
 #
 ###############################################################################
@@ -407,9 +407,9 @@ objectClasses: (
             base4kidsMaharaGroupId $
             base4kidsMattermostChannelId $
             base4kidsMattermostTeamId $
-            base4kidsNextCloudClassShareId $
-            base4kidsNextCloudClassTemplateShareId $
-            base4kidsNextCloudShareId $
+            base4kidsNextcloudClassShareId $
+            base4kidsNextcloudClassTemplateShareId $
+            base4kidsNextcloudShareId $
             base4kidsRole $
             base4kidsSchoolCampus $
             base4kidsSchoolClassLevel $
