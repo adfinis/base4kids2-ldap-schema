@@ -303,7 +303,7 @@ attributeTypes: (
 #
 # Name:     base4kidsGroupType
 # Syntax:   Printable String
-# Examples: "SCHOOL_DISTRICT" "SCHOOL_LOCATION" "SCHOOL_CAMPUS" "SCHOOL_CLASS"
+# Examples: "SCHOOL.DISTRICT" "SCHOOL.LOCATION" "SCHOOL.CAMPUS" "SCHOOL.CLASS"
 attributeTypes: ( 
       1.3.6.1.4.1.31534.2.5.2.24
       NAME 'base4kidsGroupType'
