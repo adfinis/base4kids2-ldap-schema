@@ -362,6 +362,19 @@ attributeTypes: (
       SYNTAX 1.3.6.1.4.1.1466.115.121.1.44
       SINGLE-VALUE )
 #
+# Name:     base4kidsPersiskaNumber
+# Syntax:   Printable String
+# Examples: 123.456
+attributeTypes: (
+      1.3.6.1.4.1.31534.2.5.2.29
+      NAME 'base4kidsPersiskaNumber'
+      DESC 'Employees reference number from the information system PERSISKA'
+      EQUALITY caseExactMatch
+      ORDERING caseExactOrderingMatch
+      SUBSTR caseExactSubstringsMatch
+      SYNTAX 1.3.6.1.4.1.1466.115.121.1.44
+      SINGLE-VALUE )
+#
 #
 ###############################################################################
 # Object Classes
@@ -401,6 +414,7 @@ objectClasses: ( 1.3.6.1.4.1.31534.2.5.1.1
             base4kidsIsActive $
             base4kidsLearningPlatformIsActive $
             base4kidsNextcloudUserQuota $
+            base4kidsPersiskaNumber $
             base4kidsRole $
             base4kidsSmtpReceiveIsActive $
             base4kidsSmtpSubmissionIsActive $
