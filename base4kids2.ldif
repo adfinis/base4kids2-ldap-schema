@@ -375,6 +375,18 @@ attributeTypes: (
       SYNTAX 1.3.6.1.4.1.1466.115.121.1.44
       SINGLE-VALUE )
 #
+# Name:     base4kidsExpirationDate
+# Syntax:   Generalized Time
+# Examples: 20191221235859Z
+attributeTypes: (
+      1.3.6.1.4.1.31534.2.5.2.30
+      NAME 'base4kidsExpirationDate'
+      DESC 'Expiration date of a Base4Kids object in coordinated universal time'
+      EQUALITY generalizedTimeMatch
+      ORDERING generalizedTimeOrderingMatch
+      SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+      SINGLE-VALUE )
+#
 #
 ###############################################################################
 # Object Classes
@@ -430,6 +442,7 @@ objectClasses: (
       SUP top AUXILIARY
       MAY (
             base4kidsEgovId $
+            base4kidsExpirationDate $
             base4kidsGroupType $
             base4kidsIsActive $
             base4kidsMaharaGroupId $
