@@ -387,6 +387,15 @@ attributeTypes: (
       SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
       SINGLE-VALUE )
 #
+# Name:     base4kidsSchoolClassYear
+# Syntax:   Directory String
+# Examples: "2018/2019"
+attributeTypes: (
+      1.3.6.1.4.1.31534.2.5.2.31
+      NAME 'base4kidsSchoolClassYear'
+      DESC 'The school class year'
+      SUP base4kidsSchoolClassName )
+#
 #
 ###############################################################################
 # Object Classes
@@ -456,6 +465,7 @@ objectClasses: (
             base4kidsSchoolClassLevel $
             base4kidsSchoolClassName $
             base4kidsSchoolClassSubGroup $
+            base4kidsSchoolClassYear $
             base4kidsSchoolDistrict $
             base4kidsSchoolLocation $
             base4kidsSmtpReceiveIsActive $
