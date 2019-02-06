@@ -426,6 +426,19 @@ attributeTypes: (
       DESC 'References to legal guardian DNs for this person'
       SUP base4kidsLegalGuardianOf )
 #
+# Name:     base4kidsSchoolLevel
+# Syntax:   Printable String
+# Examples: "KINDERGARTEN" "BASISSTUFE" "PRIMARSTUFE" "SEKUNDARSTUFE1" "SONDERSCHULKLASSE"
+attributeTypes: (
+      1.3.6.1.4.1.31534.2.5.2.34
+      NAME 'base4kidsSchoolLevel'
+      DESC 'The school level'
+      EQUALITY caseIgnoreMatch
+      ORDERING caseIgnoreOrderingMatch
+      SUBSTR caseIgnoreSubstringsMatch
+      SYNTAX 1.3.6.1.4.1.1466.115.121.1.44
+      SINGLE-VALUE )
+#
 #
 ###############################################################################
 # Object Classes
@@ -500,6 +513,7 @@ objectClasses: (
             base4kidsSchoolClassSubGroup $
             base4kidsSchoolClassYear $
             base4kidsSchoolDistrict $
+            base4kidsSchoolLevel $
             base4kidsSchoolLocation $
             base4kidsSmtpReceiveIsActive $
             base4kidsSmtpSubmissionIsActive ) )
