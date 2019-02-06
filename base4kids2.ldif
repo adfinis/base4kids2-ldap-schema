@@ -417,6 +417,15 @@ attributeTypes: (
       DESC 'References to DNs for which this person is a legal guardian'
       SUP member )
 #
+# Name:     base4kidsLegalGuardian
+# Syntax:   DN
+# Examples: "uid=E6789,ou=People,dc=example,dc=com"
+attributeTypes: (
+      1.3.6.1.4.1.31534.2.5.2.33
+      NAME 'base4kidsLegalGuardian'
+      DESC 'References to legal guardian DNs for this person'
+      SUP base4kidsLegalGuardianOf )
+#
 #
 ###############################################################################
 # Object Classes
@@ -455,6 +464,7 @@ objectClasses: ( 1.3.6.1.4.1.31534.2.5.1.1
             base4kidsImapIsActive $
             base4kidsIsActive $
             base4kidsLearningPlatformIsActive $
+            base4kidsLegalGuardian $
             base4kidsLegalGuardianOf $
             base4kidsNextcloudUserQuota $
             base4kidsPersiskaNumber $
