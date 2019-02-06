@@ -396,6 +396,18 @@ attributeTypes: (
       DESC 'The school class year'
       SUP base4kidsSchoolClassName )
 #
+# Name:     base4kidsSchoolProgrammYear
+# Syntax:   Integer
+# Examples: 1 - 9
+attributeTypes: (
+      1.3.6.1.4.1.31534.2.5.2.32
+      NAME 'base4kidsSchoolProgrammYear'
+      DESC 'The school programm year (Programmjahr)'
+      EQUALITY integerMatch
+      ORDERING integerOrderingMatch
+      SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+      SINGLE-VALUE )
+#
 #
 ###############################################################################
 # Object Classes
@@ -437,6 +449,7 @@ objectClasses: ( 1.3.6.1.4.1.31534.2.5.1.1
             base4kidsNextcloudUserQuota $
             base4kidsPersiskaNumber $
             base4kidsRole $
+            base4kidsSchoolProgrammYear $
             base4kidsSmtpReceiveIsActive $
             base4kidsSmtpSubmissionIsActive $
             base4kidsWebmailIsActive ) )
