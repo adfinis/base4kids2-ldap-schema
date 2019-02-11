@@ -439,6 +439,18 @@ attributeTypes: (
       SYNTAX 1.3.6.1.4.1.1466.115.121.1.44
       SINGLE-VALUE )
 #
+# Name:     base4kidsSchoolCycle
+# Syntax:   Integer
+# Examples: 0 - 3
+attributeTypes: (
+      1.3.6.1.4.1.31534.2.5.2.35
+      NAME 'base4kidsSchoolCycle'
+      DESC 'The school cycle'
+      EQUALITY integerMatch
+      ORDERING integerOrderingMatch
+      SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+      SINGLE-VALUE )
+#
 #
 ###############################################################################
 # Object Classes
@@ -512,6 +524,7 @@ objectClasses: (
             base4kidsSchoolClassName $
             base4kidsSchoolClassSubGroup $
             base4kidsSchoolClassYear $
+            base4kidsSchoolCycle $
             base4kidsSchoolDistrict $
             base4kidsSchoolLevel $
             base4kidsSchoolLocation $
