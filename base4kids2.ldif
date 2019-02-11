@@ -421,7 +421,7 @@ attributeTypes: (
 # Syntax:   DN
 # Examples: "uid=E6789,ou=People,dc=example,dc=com"
 attributeTypes: (
-      1.3.6.1.4.1.31534.2.5.2.33
+      1.3.6.1.4.1.31534.2.5.2.34
       NAME 'base4kidsLegalGuardian'
       DESC 'References to legal guardian DNs for this person'
       SUP base4kidsLegalGuardianOf )
@@ -430,7 +430,7 @@ attributeTypes: (
 # Syntax:   Printable String
 # Examples: "KINDERGARTEN" "BASISSTUFE" "PRIMARSTUFE" "SEKUNDARSTUFE1" "SONDERSCHULKLASSE"
 attributeTypes: (
-      1.3.6.1.4.1.31534.2.5.2.34
+      1.3.6.1.4.1.31534.2.5.2.35
       NAME 'base4kidsSchoolLevel'
       DESC 'The school level'
       EQUALITY caseIgnoreMatch
@@ -443,7 +443,7 @@ attributeTypes: (
 # Syntax:   Integer
 # Examples: 0 - 3
 attributeTypes: (
-      1.3.6.1.4.1.31534.2.5.2.35
+      1.3.6.1.4.1.31534.2.5.2.36
       NAME 'base4kidsSchoolCycle'
       DESC 'The school cycle'
       EQUALITY integerMatch
