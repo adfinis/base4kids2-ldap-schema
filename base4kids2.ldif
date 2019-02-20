@@ -456,7 +456,7 @@ attributeTypes: (
 # Examples: "uid=S12345,ou=People,dc=example,dc=com"
 attributeTypes: (
       1.3.6.1.4.1.31534.2.5.2.37
-      NAME 'base4kidsInitiator
+      NAME 'base4kidsInitiator'
       DESC 'Reference to a DN of a person which created a specific resource'
       SUP distinguishedName )
 #
