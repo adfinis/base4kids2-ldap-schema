@@ -520,6 +520,7 @@ objectClasses: (
             base4kidsEgovId $
             base4kidsExpirationDate $
             base4kidsGroupType $
+            base4kidsInitiator $
             base4kidsIsActive $
             base4kidsMaharaGroupId $
             base4kidsMattermostChannelId $
