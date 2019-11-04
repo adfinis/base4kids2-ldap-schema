@@ -480,6 +480,15 @@ attributeTypes: (
       SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
       SINGLE-VALUE )
 #
+# Name:     base4kidsCountryCode
+# Syntax:   Country String
+# Examples, CH, DE, FR
+attributeTypes: (
+      1.3.6.1.4.1.31534.2.5.2.40
+      NAME 'base4kidsCountryCode'
+      DESC 'ISO 3166 two-letter country code'
+      SUP c )
+#
 #
 ###############################################################################
 # Object Classes
@@ -511,6 +520,7 @@ objectClasses: ( 1.3.6.1.4.1.31534.2.5.1.1
             base4kidsAppleId $ 
             base4kidsChatIsActive $
             base4kidsCloudStorageIsActive $
+            base4kidsCountryCode $
             base4kidsEgovId $
             base4kidsEportfolioIsActive $
             base4kidsGender $
