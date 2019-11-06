@@ -475,7 +475,7 @@ attributeTypes: (
 attributeTypes: ( 
       1.3.6.1.4.1.31534.2.5.2.39
       NAME 'base4kidsIsBlocked'
-      DESC 'Determines whether a base4kids object is blocked'
+      DESC 'Determines whether a base4kids object is blocked but still active'
       EQUALITY booleanMatch
       SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
       SINGLE-VALUE )
@@ -488,6 +488,15 @@ attributeTypes: (
       NAME 'base4kidsCountryCode'
       DESC 'ISO 3166 two-letter country code'
       SUP c )
+#
+# Name:     base4kidsIsDisabled
+# Syntax:   Boolean
+# Examples, TRUE, FALSE
+attributeTypes: (
+      1.3.6.1.4.1.31534.2.5.2.41
+      NAME 'base4kidsIsDisabled'
+      DESC 'Determines whether a base4kids object is disabled but still active'
+      SUP base4kidsIsBlocked )
 #
 #
 ###############################################################################
@@ -528,6 +537,7 @@ objectClasses: ( 1.3.6.1.4.1.31534.2.5.1.1
             base4kidsImapIsActive $
             base4kidsIsActive $
             base4kidsIsBlocked $
+            base4kidsIsDisabled $
             base4kidsLearningPlatformIsActive $
             base4kidsLegalGuardian $
             base4kidsLegalGuardianOf $
@@ -554,6 +564,7 @@ objectClasses: (
             base4kidsInitiator $
             base4kidsIsActive $
             base4kidsIsBlocked $
+            base4kidsIsDisabled $
             base4kidsMaharaGroupId $
             base4kidsMattermostChannelId $
             base4kidsMattermostTeamId $
