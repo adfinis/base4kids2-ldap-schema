@@ -498,29 +498,23 @@ attributeTypes: (
       DESC 'Determines whether a base4kids object is disabled but still active'
       SUP base4kidsIsBlocked )
 #
-# Name:     base4kidsTelephoneNumberBusiness
+# Name:     base4kidsBusinessTelephoneNumber
 # Syntax:   Phone number
-# Examples: +01234567890
+# Examples: +41 234 567 890, +41234567890
 attributeTypes: (
       1.3.6.1.4.1.31534.2.5.2.42
-      NAME 'base4kidsTelephoneNumberBusiness'
+      NAME 'base4kidsBusinessTelephoneNumber'
       DESC 'Business telephone number'
-      EQUALITY telephoneNumberMatch
-      ORDERING telephoneNumberOrderingMatch
-      SYNTAX 1.3.6.1.4.1.1466.115.121.1.50
-      SINGLE-VALUE )
+      SUP telephoneNumber )
 #
 # Name:     base4kidsDateOfBirth
-# Syntax:   Generalized Time
-# Examples: 19951221000000Z
+# Syntax:   Directory String
+# Examples: 2019-12-25
 attributeTypes: (
       1.3.6.1.4.1.31534.2.5.2.43
       NAME 'base4kidsDateOfBirth'
       DESC 'Date of Birth'
-      EQUALITY generalizedTimeMatch
-      ORDERING generalizedTimeOrderingMatch
-      SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
-      SINGLE-VALUE )
+      SUP base4kidsGroupType )
 #
 # Name:     base4kidsPlaceOfOrigin
 # Syntax:   Directory String
@@ -528,12 +522,8 @@ attributeTypes: (
 attributeTypes: (
       1.3.6.1.4.1.31534.2.5.2.44
       NAME 'base4kidsPlaceOfOrigin'
-      DESC 'The name of a place (city)'
-      EQUALITY caseExactMatch
-      ORDERING caseExactOrderingMatch
-      SUBSTR caseExactSubstringsMatch
-      SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
-      SINGLE-VALUE )
+      DESC 'The place of origin'
+      SUP l )
 #
 #
 ###############################################################################
@@ -563,7 +553,8 @@ objectClasses: ( 1.3.6.1.4.1.31534.2.5.1.1
       DESC 'Base4Kids person object'
       SUP top AUXILIARY
       MAY ( 
-            base4kidsAppleId $ 
+            base4kidsAppleId $
+            base4kidsBusinessTelephoneNumber $
             base4kidsChatIsActive $
             base4kidsCloudStorageIsActive $
             base4kidsCountryCode $
@@ -586,7 +577,6 @@ objectClasses: ( 1.3.6.1.4.1.31534.2.5.1.1
             base4kidsSchoolProgrammYear $
             base4kidsSmtpReceiveIsActive $
             base4kidsSmtpSubmissionIsActive $
-            base4kidsTelephoneNumberBusiness $
             base4kidsWebmailIsActive ) )
 #
 # Name:        base4kidsGroup
