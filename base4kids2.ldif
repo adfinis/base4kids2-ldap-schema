@@ -508,13 +508,17 @@ attributeTypes: (
       SUP telephoneNumber )
 #
 # Name:     base4kidsDateOfBirth
-# Syntax:   Directory String
+# Syntax:   Printable String
 # Examples: 2019-12-25
 attributeTypes: (
       1.3.6.1.4.1.31534.2.5.2.43
       NAME 'base4kidsDateOfBirth'
       DESC 'Date of Birth'
-      SUP base4kidsGroupType )
+      EQUALITY caseExactMatch
+      ORDERING caseExactOrderingMatch
+      SUBSTR caseExactSubstringsMatch
+      SYNTAX 1.3.6.1.4.1.1466.115.121.1.44
+      SINGLE-VALUE )
 #
 # Name:     base4kidsPlaceOfOrigin
 # Syntax:   Directory String
